@@ -2,52 +2,35 @@
 /**
  * @file main.cpp
  * @brief Embedded Touch Detection System using TTP223
- * @author YOUR_NAME
- * @date YYYY-MM-DD
+ * @author Mayank
+ * @date 2026-02-19
  *
  * @details
  * Reads digital touch input from TTP223 sensor
  * and displays structured output via Serial Monitor.
  */
 
- // TODO 1:
 const int touchPin = 2;
-
-
- // TODO 2:
 int touchState = 0;
 
 
 void setup() {
 
-    // TODO 3:
     Serial.begin(9600);
-
-
-    // TODO 4:
     pinMode(touchPin, INPUT);
-
-
-    // TODO 5:
     Serial.println("Touch Sensor System Initialized");
 
 }
 
 void loop() {
 
-    // TODO 6:
     touchState = digitalRead(touchPin);
-
-
-    // TODO 7:
     if (touchState == HIGH) {
         Serial.println("Touch Detected");
     } else {
         Serial.println("No Touch");
     }
 
-
-    // TODO 8:
     delay(300);
 
 }
